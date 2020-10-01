@@ -5,6 +5,8 @@ import './app.css';
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
 
+import { Common } from '@play-with-nx/common';
+
 export const App = () => {
   /*
    * Replace the elements below with your own.
@@ -16,6 +18,7 @@ export const App = () => {
       <header className="flex">
         <Logo width="75" height="75" />
         <h1>Welcome to the-other-app!</h1>
+        <Common></Common>
       </header>
       <main>
         <h2>Resources &amp; Tools</h2>
