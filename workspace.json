@@ -316,6 +316,58 @@
           }
         }
       }
+    },
+    "the-one": {
+      "root": "libs/the-one",
+      "sourceRoot": "libs/the-one/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/the-one/tsconfig.lib.json",
+              "libs/the-one/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/the-one/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/the-one/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "the-other": {
+      "root": "libs/the-other",
+      "sourceRoot": "libs/the-other/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/the-other/tsconfig.lib.json",
+              "libs/the-other/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/the-other/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/the-other/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

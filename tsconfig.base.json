@@ -16,7 +16,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@play-with-nx/common": ["libs/common/src/index.ts"]
+      "@play-with-nx/common": ["libs/common/src/index.ts"],
+      "@play-with-nx/the-one": ["libs/the-one/src/index.ts"],
+      "@play-with-nx/the-other": ["libs/the-other/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

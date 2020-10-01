@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './app/app';
+import { TheOne } from '@play-with-nx/the-one';
+import { TheOther } from '@play-with-nx/the-other';
+import { Common } from '@play-with-nx/common';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TheOne />
+    <Common />
+    <TheOther />
   </React.StrictMode>,
   document.getElementById('root')
 );
