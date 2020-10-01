@@ -6,6 +6,13 @@ import TheOne from './the-one';
 describe('TheOne', () => {
   it('should render successfully', () => {
     const { baseElement } = render(<TheOne />);
+
     expect(baseElement).toBeTruthy();
+  });
+
+  it('should have a greeting as the title', () => {
+    const { getByText } = render(<TheOne />);
+
+    expect(getByText('Welcome to the-one-app!')).toBeTruthy();
   });
 });

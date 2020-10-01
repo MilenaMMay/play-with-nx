@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './app/app';
+import { TheOne } from '@play-with-nx/the-one';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TheOne />
   </React.StrictMode>,
   document.getElementById('root')
 );
