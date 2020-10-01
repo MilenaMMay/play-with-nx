@@ -1,25 +1,25 @@
 {
   "version": 1,
   "projects": {
-    "nx-playground": {
-      "root": "apps/nx-playground",
-      "sourceRoot": "apps/nx-playground/src",
+    "the-one-app": {
+      "root": "apps/the-one-app",
+      "sourceRoot": "apps/the-one-app/src",
       "projectType": "application",
       "schematics": {},
       "architect": {
         "build": {
           "builder": "@nrwl/web:build",
           "options": {
-            "outputPath": "dist/apps/nx-playground",
-            "index": "apps/nx-playground/src/index.html",
-            "main": "apps/nx-playground/src/main.tsx",
-            "polyfills": "apps/nx-playground/src/polyfills.ts",
-            "tsConfig": "apps/nx-playground/tsconfig.app.json",
+            "outputPath": "dist/apps/the-one-app",
+            "index": "apps/the-one-app/src/index.html",
+            "main": "apps/the-one-app/src/main.tsx",
+            "polyfills": "apps/the-one-app/src/polyfills.ts",
+            "tsConfig": "apps/the-one-app/tsconfig.app.json",
             "assets": [
-              "apps/nx-playground/src/favicon.ico",
-              "apps/nx-playground/src/assets"
+              "apps/the-one-app/src/favicon.ico",
+              "apps/the-one-app/src/assets"
             ],
-            "styles": ["apps/nx-playground/src/styles.css"],
+            "styles": ["apps/the-one-app/src/styles.css"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -27,8 +27,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/nx-playground/src/environments/environment.ts",
-                  "with": "apps/nx-playground/src/environments/environment.prod.ts"
+                  "replace": "apps/the-one-app/src/environments/environment.ts",
+                  "with": "apps/the-one-app/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -51,11 +51,11 @@
         "serve": {
           "builder": "@nrwl/web:dev-server",
           "options": {
-            "buildTarget": "nx-playground:build"
+            "buildTarget": "the-one-app:build"
           },
           "configurations": {
             "production": {
-              "buildTarget": "nx-playground:build:production"
+              "buildTarget": "the-one-app:build:production"
             }
           }
         },
@@ -64,36 +64,36 @@
           "options": {
             "linter": "eslint",
             "tsConfig": [
-              "apps/nx-playground/tsconfig.app.json",
-              "apps/nx-playground/tsconfig.spec.json"
+              "apps/the-one-app/tsconfig.app.json",
+              "apps/the-one-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/nx-playground/**/*"]
+            "exclude": ["**/node_modules/**", "!apps/the-one-app/**/*"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/nx-playground/jest.config.js",
+            "jestConfig": "apps/the-one-app/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "nx-playground-e2e": {
-      "root": "apps/nx-playground-e2e",
-      "sourceRoot": "apps/nx-playground-e2e/src",
+    "the-one-app-e2e": {
+      "root": "apps/the-one-app-e2e",
+      "sourceRoot": "apps/the-one-app-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/nx-playground-e2e/cypress.json",
-            "tsConfig": "apps/nx-playground-e2e/tsconfig.e2e.json",
-            "devServerTarget": "nx-playground:serve"
+            "cypressConfig": "apps/the-one-app-e2e/cypress.json",
+            "tsConfig": "apps/the-one-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "the-one-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "nx-playground:serve:production"
+              "devServerTarget": "the-one-app:serve:production"
             }
           }
         },
@@ -101,8 +101,8 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "tsConfig": ["apps/nx-playground-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/nx-playground-e2e/**/*"]
+            "tsConfig": ["apps/the-one-app-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/the-one-app-e2e/**/*"]
           }
         }
       }
@@ -259,5 +259,5 @@
       }
     }
   },
-  "defaultProject": "nx-playground"
+  "defaultProject": "the-one-app"
 }

@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'nx-playground',
+  name: 'the-one-app',
   preset: '../../jest.config.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nrwl/react/plugins/jest',
@@ -9,5 +9,5 @@ module.exports = {
     ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/apps/nx-playground',
+  coverageDirectory: '../../coverage/apps/the-one-app',
 };

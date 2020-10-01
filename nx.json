@@ -22,12 +22,12 @@
     }
   },
   "projects": {
-    "nx-playground": {
+    "the-one-app": {
       "tags": []
     },
-    "nx-playground-e2e": {
+    "the-one-app-e2e": {
       "tags": [],
-      "implicitDependencies": ["nx-playground"]
+      "implicitDependencies": ["the-one-app"]
     },
     "common": {
       "tags": []
