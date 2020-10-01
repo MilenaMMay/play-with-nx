@@ -31,6 +31,13 @@
     },
     "common": {
       "tags": []
+    },
+    "the-other-app": {
+      "tags": []
+    },
+    "the-other-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["the-other-app"]
     }
   }
 }
