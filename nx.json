@@ -28,6 +28,9 @@
     "nx-playground-e2e": {
       "tags": [],
       "implicitDependencies": ["nx-playground"]
+    },
+    "common": {
+      "tags": []
     }
   }
 }
