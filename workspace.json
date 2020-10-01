@@ -238,6 +238,84 @@
           }
         }
       }
+    },
+    "the-whole-app": {
+      "root": "apps/the-whole-app",
+      "sourceRoot": "apps/the-whole-app/src",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/web:build",
+          "options": {
+            "outputPath": "dist/apps/the-whole-app",
+            "index": "apps/the-whole-app/src/index.html",
+            "main": "apps/the-whole-app/src/main.tsx",
+            "polyfills": "apps/the-whole-app/src/polyfills.ts",
+            "tsConfig": "apps/the-whole-app/tsconfig.app.json",
+            "assets": [
+              "apps/the-whole-app/src/favicon.ico",
+              "apps/the-whole-app/src/assets"
+            ],
+            "styles": ["apps/the-whole-app/src/styles.css"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/the-whole-app/src/environments/environment.ts",
+                  "with": "apps/the-whole-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "the-whole-app:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "the-whole-app:build:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "apps/the-whole-app/tsconfig.app.json",
+              "apps/the-whole-app/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/the-whole-app/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/the-whole-app/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -259,5 +337,5 @@
       }
     }
   },
-  "defaultProject": "the-one-app"
+  "defaultProject": "the-whole-app"
 }

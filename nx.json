@@ -38,6 +38,9 @@
     "the-other-app-e2e": {
       "tags": [],
       "implicitDependencies": ["the-other-app"]
+    },
+    "the-whole-app": {
+      "tags": []
     }
   }
 }
