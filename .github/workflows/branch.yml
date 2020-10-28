@@ -3,10 +3,8 @@
 name: CI
 
 # Controls when the action will run. 
-# Triggers the workflow on push to a non main branch or pull request to main branch
+# Triggers the workflow on pull request to main branch
 on:
-  push:
-    branches-ignore: [ main ]
   pull_request:
     branches: [ main ]
 
