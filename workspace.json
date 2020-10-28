@@ -51,7 +51,8 @@
         "serve": {
           "builder": "@nrwl/web:dev-server",
           "options": {
-            "buildTarget": "the-one-app:build"
+            "buildTarget": "the-one-app:build",
+            "port": 4300
           },
           "configurations": {
             "production": {
@@ -183,7 +184,8 @@
         "serve": {
           "builder": "@nrwl/web:dev-server",
           "options": {
-            "buildTarget": "the-other-app:build"
+            "buildTarget": "the-other-app:build",
+            "port": 4400
           },
           "configurations": {
             "production": {
