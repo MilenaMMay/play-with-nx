@@ -13,6 +13,6 @@ describe('TheOther', () => {
   it('should have a greeting as the title', () => {
     const { getByText } = render(<TheOther />);
 
-    expect(getByText('I AM THE ONE APP')).toBeTruthy();
+    expect(getByText('Welcome to the-other-app!')).toBeTruthy();
   });
 });

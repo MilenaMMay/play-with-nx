@@ -9,7 +9,7 @@ You can start them separately with `nx serve the-one-app` and `nx serve the-othe
 
 Their e2e tests can be run separately and don't need `the-whole-app`.
 
-Because of Nx concept of `affected`, if you run the tests once, change something in `the-one` libary and then run `nx affected:test --base=main` and `nx affected:e2e --base=main` only the tests for `the-one-app` and `the-whole-app` but not for `common` and `the-other-app` will be run. Whooohoo! =)
+Because of Nx concept of `affected`, if you run the tests once, change something in `the-one` libary and then run `npm run nx affected:test` and `npm run nx affected:e2e` only the tests for `the-one-app` and `the-whole-app` but not for `common` and `the-other-app` will be run. Whooohoo! =)
 
 ---
 
