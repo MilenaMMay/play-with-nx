@@ -23,8 +23,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Test
-        run: nx affected:test --base=main
+        run: npm nx affected:test --base=main
 
       - name: E2E
-        run: nx affected:e2e --base=main
+        run: npm nx affected:e2e --base=main
 
