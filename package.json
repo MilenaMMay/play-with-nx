@@ -60,6 +60,7 @@
     "eslint-plugin-react": "7.20.0",
     "eslint-plugin-react-hooks": "4.0.4",
     "jest": "26.2.2",
+    "nx": "^10.3.1",
     "prettier": "2.0.4",
     "ts-jest": "26.1.4",
     "ts-node": "~7.0.0",
