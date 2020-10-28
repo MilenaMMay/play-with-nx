@@ -17,7 +17,7 @@ export const TheOne = () => {
     <div className="app">
       <header className="flex">
         <Logo width="75" height="75" />
-        <h1>Welcome to THE ONE App!</h1>
+        <h1>I am THE ONE App!</h1>
         <Common></Common>
       </header>
       <main>
