@@ -4,12 +4,12 @@ See the dependency graph with Nx VsCode Tools or `nx dep-graph`:
 
 The idea of this playground is to have the possibility to independently develop `the-one-app` and `the-other-app`.
 
-You can start them separately with `yarn nx serve the-one-app` and `yarn nx serve the-other-app`. Also, you can start both with `yarn nx serve the-whole-app`.
+You can start them separately with `nx serve the-one-app` and `nx serve the-other-app`. Also, you can start both with `nx serve the-whole-app`.
 (Don't start them all at once because they bind to the same port.)
 
 Their e2e tests can be run separately and don't need `the-whole-app`.
 
-Because of Nx concept of `affected`, if you run the tests once, change something in `the-one` libary and then run `yarn nx affected:tests` only the tests for `the-one-app` and `the-whole-app` but not for `common` and `the-other-app` will be run. Whooohoo! =)
+Because of Nx concept of `affected`, if you run the tests once, change something in `the-one` libary and then run `nx affected:test --base=main` and `nx affected:e2e --base=main` only the tests for `the-one-app` and `the-whole-app` but not for `common` and `the-other-app` will be run. Whooohoo! =)
 
 ---
 
