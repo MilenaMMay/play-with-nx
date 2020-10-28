@@ -29,6 +29,8 @@ jobs:
         run: npm install
   
       - name: Test
-        run: npm run nx affected:test
+        run: npm run nx affected:test -- --base=origin/main
+
       - name: E2E
-        run: npm run nx affected:e2e
+        run: npm run nx affected:e2e -- --base=origin/main
+
