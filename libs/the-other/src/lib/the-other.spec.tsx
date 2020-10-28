@@ -1,17 +1,17 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import App from './app';
+import TheOther from './the-other';
 
-describe('App', () => {
+describe('TheOther', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<App />);
+    const { baseElement } = render(<TheOther />);
 
     expect(baseElement).toBeTruthy();
   });
 
   it('should have a greeting as the title', () => {
-    const { getByText } = render(<App />);
+    const { getByText } = render(<TheOther />);
 
     expect(getByText('Welcome to the-other-app!')).toBeTruthy();
   });
