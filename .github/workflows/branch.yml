@@ -22,15 +22,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
-          fetch-depth: 0
+          fetch-depth: 2
+
+      # let NX diff against the previous commit, see https://github.com/nrwl/nx/issues/2170#issuecomment-601595383
+      - name: Get NX_BASE
+        run: run export NX_BASE=$(git rev-parse HEAD~1)
 
       - name: Install dependencies
         run: npm install
   
       - name: Test
-        run: npm run nx affected:test -- --base=origin/main
+        run: npm run nx affected:test -- --base=$NX_BASE
 
       - name: E2E
-        run: npm run nx affected:e2e -- --base=origin/main
+        run: npm run nx affected:e2e -- --base=$NX_BASE
 
