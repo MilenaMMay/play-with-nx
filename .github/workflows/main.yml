@@ -2,12 +2,9 @@
 
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the main branch
+# Controls when the action will run. Triggers the workflow on push to the main branch
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -26,8 +23,8 @@ jobs:
         run: npm install
   
       - name: Test
-        run: npm run nx affected:test
+        run: npm run nx run-many -- --all --parallel --target=test
 
       - name: E2E
-        run: npm run nx affected:test
+        run: npm run nx run-many -- --all --parallel --target=e2e
 
